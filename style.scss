@@ -32,6 +32,7 @@ h2 {
 	padding: 25px;
 	background-image: url(./assets/images/background-pattern-desktop.svg);
 	background-repeat: no-repeat;
+	background-size: contain;
 	position: relative;
 }
 
@@ -40,7 +41,8 @@ h2 {
 	top: 370px;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	min-width: 600px;
+	max-width: 600px;
+	min-width: 320px;
 	padding: 40px 42px;
 	border-radius: 16px;
 	background-color: var(--white);
@@ -112,6 +114,47 @@ header {
 		.content {
 			max-height: 200px;
 			visibility: visible;
+		}
+	}
+}
+
+.attribution {
+	p {
+		margin: 0 auto;
+		width: fit-content;
+		color: var(--dark-purple);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+		background-image: url(./assets/images/background-pattern-mobile.svg);
+	}
+
+	.faqs {
+		border-radius: 8px;
+		padding: 24px;
+	}
+
+	header {
+		img {
+			width: 24px;
+			height: 24px;
+		}
+
+		h1 {
+			font-size: 32px;
+		}
+	}
+
+	.accordion {
+		.tab {
+			.heading {
+				font-size: 16px;
+			}
+			.content {
+				font-size: 14px;
+			}
 		}
 	}
 }
