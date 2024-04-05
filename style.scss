@@ -11,6 +11,7 @@
 
 :root {
 	--white: hsl(0, 0%, 100%);
+	--pink: hsl(281, 83%, 54%);
 	--light-pink: hsl(275, 100%, 97%);
 	--graysih-purple: hsl(292, 16%, 49%);
 	--dark-purple: hsl(292, 42%, 14%);
@@ -28,31 +29,27 @@ h2 {
 
 .container {
 	width: 100%;
-	height: calc(100vh - 80px);
+	min-height: calc(100vh - 80px);
 	padding: 25px;
 	background-image: url(./assets/images/background-pattern-desktop.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
-	position: relative;
 }
 
 .faqs {
-	position: absolute;
-	top: 370px;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	max-width: 600px;
 	min-width: 320px;
+	margin: auto;
 	padding: 40px 42px;
 	border-radius: 16px;
 	background-color: var(--white);
+	margin-top: 10%;
 }
 
 .accordion {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
-	margin-top: 28px;
 }
 
 .hr {
@@ -82,6 +79,10 @@ header {
 			justify-content: space-between;
 			gap: 16px;
 			cursor: pointer;
+
+			&:hover {
+				color: var(--pink);
+			}
 
 			.close {
 				display: none;
